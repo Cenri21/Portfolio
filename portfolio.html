@@ -530,6 +530,51 @@
     line-height: 1.7;
   }
 
+  .exp-tag {
+    display: inline-block;
+    margin-left: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 500;
+    padding: 2px 9px;
+    border-radius: 100px;
+    background: var(--cyan-dim);
+    color: var(--cyan);
+    border: 1px solid rgba(0,212,255,0.25);
+    vertical-align: middle;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  .exp-highlights {
+    list-style: none;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  .exp-highlights li {
+    position: relative;
+    padding-left: 1.4rem;
+    font-size: 14px;
+    color: var(--muted2);
+    line-height: 1.6;
+  }
+
+  .exp-highlights li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--cyan);
+  }
+
+  .exp-highlights strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+
   /* ACHIEVEMENT STRIP */
   .achievement-strip {
     display: grid;
@@ -924,44 +969,30 @@
 
     <div class="exp-item">
       <div class="exp-date">Dec 2025 — Present</div>
-      <div class="exp-role">Operations Manager / Executive Assistant</div>
+      <div class="exp-role">Operations Manager / Executive Assistant<span class="exp-tag">Current Role</span></div>
       <div class="exp-company">Lookup Media LLC · Sheridan, Wyoming, USA · Remote</div>
-      <div class="exp-desc">Managed full YouTube channel operations, built Make.com and n8n automations, created Discord recruitment bot, developed AI image pipelines, built SOPs, handled end-to-end recruitment, trained employees, set up all company digital presence, and supported CEO on business projects.</div>
+      <div class="exp-desc">The operations backbone of a US-based digital media company — I run end-to-end operations for a portfolio of YouTube channels, build the automation and AI systems that power the team, handle recruitment and payroll, and work directly with the CEO on new launches.</div>
+      <ul class="exp-highlights">
+        <li><strong>Automation &amp; Engineering</strong> — Built Make.com Trello→Discord and Excel→Notion automations, a Python Discord recruitment bot, an n8n + ComfyUI + Docker + RunPod AI image pipeline, and a Vercel-deployed batch image generator.</li>
+        <li><strong>Operations &amp; Systems</strong> — Built a Notion AI operations hub (task tracking, EOD reports, team database), authored SOPs, and managed Trello &amp; Airtable records across every channel.</li>
+        <li><strong>Recruitment &amp; Team</strong> — Ran full-cycle recruitment (job posts, sourcing, screening, interviews), onboarding, scheduling, employee training for promotion, and salary processing.</li>
+        <li><strong>Channels &amp; Monetization</strong> — Handled channel setup, identity verification, monetization &amp; AdSense tracking, proxy/MultiLogin management, and YouTube demonetization appeals.</li>
+        <li><strong>AI &amp; Content</strong> — Prompt engineering for Sora 2 motion and hyper-realistic image generation; content ideation for Dish, Food, and ASMR channels; set up the full company digital presence (Facebook, LinkedIn, Upwork, Gumroad, Namecheap domain).</li>
+      </ul>
     </div>
 
     <div class="exp-item">
-      <div class="exp-date">Nov 2024 — Present</div>
-      <div class="exp-role">Content Creator & Social Media Manager</div>
-      <div class="exp-company">Cenri · Philippines</div>
-      <div class="exp-desc">Grew social media presence to 7M total views across Instagram, TikTok, and YouTube using Hootsuite, Publer, and Metricool for scheduling and performance optimization.</div>
-    </div>
-
-    <div class="exp-item">
-      <div class="exp-date">Sep — Oct 2025</div>
-      <div class="exp-role">Human Resource Intern</div>
-      <div class="exp-company">Oakridge24 Fitness Inc · Philippines</div>
-      <div class="exp-desc">Handled full-cycle recruitment, HRIS data management, compensation tracking, employee relations, and team-building events using Asana and Excel.</div>
-    </div>
-
-    <div class="exp-item">
-      <div class="exp-date">Nov 2024 — May 2025</div>
-      <div class="exp-role">Virtual Assistant</div>
-      <div class="exp-company">LeadersOutreach · Remote</div>
-      <div class="exp-desc">Edited short-form and long-form videos, designed leadership infographics, and used Leonardo AI and ChatGPT for content ideation and production.</div>
-    </div>
-
-    <div class="exp-item">
-      <div class="exp-date">Jun 2023 — Feb 2024</div>
-      <div class="exp-role">Data Entry Specialist</div>
-      <div class="exp-company">Lightyear Service INC · Remote</div>
-      <div class="exp-desc">Scraped data from LinkedIn, posted job openings across platforms, managed Discord and social media engagement, and used Coda for task collaboration.</div>
-    </div>
-
-    <div class="exp-item">
-      <div class="exp-date">Feb — Aug 2023</div>
-      <div class="exp-role">Virtual Assistant</div>
-      <div class="exp-company">Worlans / Outreach Bros / CheckmateFuel · Remote</div>
-      <div class="exp-desc">Managed social media, scraped leads using D7 Lead Finder and Heepsy, scheduled outreach campaigns via Calendly, and edited promotional videos using Adobe Premiere Pro and DaVinci Resolve.</div>
+      <div class="exp-date">2023 — 2025</div>
+      <div class="exp-role">Earlier Experience<span class="exp-tag">Foundation</span></div>
+      <div class="exp-company">Content, HR, virtual assistance &amp; data — across multiple remote teams</div>
+      <div class="exp-desc">Before Lookup Media, I built a broad foundation across content creation, recruitment, and remote operations:</div>
+      <ul class="exp-highlights">
+        <li><strong>Content Creator — Cenri (2024–Present)</strong> — Grew social media to 7M+ total views across Instagram, TikTok, and YouTube using Hootsuite, Publer, and Metricool.</li>
+        <li><strong>HR Intern — Oakridge24 Fitness Inc (2025)</strong> — Full-cycle recruitment, HRIS data management, and compensation tracking with Asana and Excel.</li>
+        <li><strong>Virtual Assistant — LeadersOutreach (2024–2025)</strong> — Video editing, infographic design, and AI-assisted content with Leonardo AI and ChatGPT.</li>
+        <li><strong>Data Entry Specialist — Lightyear Service Inc (2023–2024)</strong> — LinkedIn scraping, cross-platform job postings, and community management with Coda.</li>
+        <li><strong>Virtual Assistant — Worlans / Outreach Bros / CheckmateFuel (2023)</strong> — Lead scraping, outreach campaigns via Calendly, and promotional video editing.</li>
+      </ul>
     </div>
 
   </div>
