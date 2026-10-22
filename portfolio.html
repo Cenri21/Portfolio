@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>John Paul Maspara — Automation & Operations</title>
+<title>John Paul Maspara | Automation & Operations</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -386,6 +386,8 @@
     border-bottom: 1px solid var(--border);
   }
 
+  .project-thumb.fit { object-fit: contain; }
+
   .project-header {
     padding: 1.75rem 1.75rem 0;
     display: flex;
@@ -688,7 +690,7 @@
         & Ops Manager
       </h1>
       <p class="hero-sub">
-        I build the systems that keep teams running — from Discord recruitment bots and Make.com workflows to AI image pipelines and full company operations. Real work, deployed live.
+        I build the systems that keep teams running, from Discord recruitment bots and Make.com workflows to AI image pipelines and full company operations. Real work, deployed live.
       </p>
       <div class="hero-stats">
         <div class="stat-item">
@@ -744,13 +746,13 @@
 <section id="services">
   <div class="section-label">// What I do</div>
   <h2 class="section-title">Services</h2>
-  <p class="section-sub">From automation engineering to full business operations — I build and run the systems behind growing teams.</p>
+  <p class="section-sub">From automation engineering to full business operations, I build and run the systems behind growing teams.</p>
 
   <div class="services-grid">
     <div class="service-card">
       <div class="service-icon icon-cyan">⚡</div>
       <h3>Workflow Automation</h3>
-      <p>Build end-to-end automations that eliminate manual work — Trello to Discord, Excel to Notion, AI image pipelines, and custom n8n workflows.</p>
+      <p>Build end-to-end automations that eliminate manual work: Trello to Discord, Excel to Notion, AI image pipelines, and custom n8n workflows.</p>
       <div class="service-tags">
         <span class="tag">Make</span>
         <span class="tag">n8n</span>
@@ -763,7 +765,7 @@
     <div class="service-card">
       <div class="service-icon icon-purple">🤖</div>
       <h3>Discord Servers & Bots</h3>
-      <p>Design and structure full Discord servers — roles, channels, and permissions — then build custom Python bots on top for recruitment, team management, and automation. Hosted and deployed live.</p>
+      <p>Design and structure full Discord servers (roles, channels, and permissions), then build custom Python bots on top for recruitment, team management, and automation. Hosted and deployed live.</p>
       <div class="service-tags">
         <span class="tag">Server Design</span>
         <span class="tag">Python</span>
@@ -788,7 +790,7 @@
     <div class="service-card">
       <div class="service-icon icon-amber">📋</div>
       <h3>Operations & VA Support</h3>
-      <p>Full business operations — SOPs, recruitment pipelines, onboarding, team management, data entry, and executive assistant support.</p>
+      <p>Full business operations: SOPs, recruitment pipelines, onboarding, team management, data entry, and executive assistant support.</p>
       <div class="service-tags">
         <span class="tag">SOP Creation</span>
         <span class="tag">Recruitment</span>
@@ -818,12 +820,29 @@
 <section id="portfolio">
   <div class="section-label">// Proof of work</div>
   <h2 class="section-title">Portfolio</h2>
-  <p class="section-sub">The systems, bots, automations, and apps I have built and deployed for a US-based digital media company.</p>
+  <p class="section-sub">The systems, bots, automations, and apps I have built and deployed for a US-based digital media company, plus the tools and demos I build for clients.</p>
 
   <div class="portfolio-grid">
 
     <div class="project-card">
-      <img class="project-thumb" src="batch-generator.png" alt="AI Batch Image Generator" loading="lazy">
+      <img class="project-thumb" src="discord-server.jpg" alt="Discord Server Builder Bot" loading="lazy">
+      <div class="project-header">
+        <div class="project-icon icon-purple">🏗️</div>
+        <span class="project-badge">Live</span>
+      </div>
+      <div class="project-body">
+        <h3>Discord Server Builder Bot</h3>
+        <p>Built a bot that sets up a full Discord server from a template with one command: roles, channels, threads, and permissions in a couple of minutes. Four ready templates, from a small community to a full team workspace.</p>
+        <div class="project-stack">
+          <span class="stack-tag">Python</span>
+          <span class="stack-tag">Discord API</span>
+          <span class="stack-tag">Templates</span>
+          <span class="stack-tag">Permissions</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
       <div class="project-header">
         <div class="project-icon icon-cyan">🖼️</div>
         <span class="project-badge">Live</span>
@@ -841,14 +860,14 @@
     </div>
 
     <div class="project-card">
-      <img class="project-thumb" src="discord-bot.png" alt="Discord Recruitment Automation Bot" loading="lazy">
+      <img class="project-thumb" src="discord-bot.jpg" alt="Discord Recruitment Automation Bot" loading="lazy">
       <div class="project-header">
         <div class="project-icon icon-purple">🤖</div>
         <span class="project-badge">Live</span>
       </div>
       <div class="project-body">
         <h3>Discord Recruitment Automation Bot</h3>
-        <p>Built a Python Discord bot that fully automates recruitment trial tasks. When an applicant opens a ticket, the bot auto-assigns their niche role, tags them with instructions, and notifies the relevant team leads — zero manual work.</p>
+        <p>Built a Python Discord bot that fully automates recruitment trial tasks. When an applicant opens a ticket, the bot auto-assigns their niche role, tags them with instructions, and notifies the relevant team leads. Zero manual work.</p>
         <div class="project-stack">
           <span class="stack-tag">Python</span>
           <span class="stack-tag">Discord API</span>
@@ -859,14 +878,14 @@
     </div>
 
     <div class="project-card">
-      <img class="project-thumb" src="make-automation.png" alt="Make.com Trello to Discord Notification System" loading="lazy">
+      <img class="project-thumb" src="automation.jpg" alt="Make.com Trello to Discord Notification System" loading="lazy">
       <div class="project-header">
         <div class="project-icon icon-green">⚡</div>
         <span class="project-badge">Live</span>
       </div>
       <div class="project-body">
         <h3>Make.com Trello → Discord Notification System</h3>
-        <p>Built a Make.com automation that watches Trello boards across multiple YouTube channels and notifies editors in Discord the moment a card moves — video ready to edit, approved, or needs changes. Eliminated all manual follow-ups.</p>
+        <p>Built a Make.com automation that watches Trello boards across multiple YouTube channels and notifies editors in Discord the moment a card moves: video ready to edit, approved, or needs changes. Eliminated all manual follow-ups.</p>
         <div class="project-stack">
           <span class="stack-tag">Make</span>
           <span class="stack-tag">Trello</span>
@@ -877,7 +896,6 @@
     </div>
 
     <div class="project-card">
-      <img class="project-thumb" src="n8n-workflow.png" alt="n8n plus ComfyUI plus RunPod AI Pipeline" loading="lazy">
       <div class="project-header">
         <div class="project-icon icon-amber">🎨</div>
         <span class="project-badge">Live</span>
@@ -896,14 +914,13 @@
     </div>
 
     <div class="project-card">
-      <img class="project-thumb" src="notion-dashboard.png" alt="Notion AI Operations Hub" loading="lazy">
       <div class="project-header">
         <div class="project-icon icon-cyan">📊</div>
         <span class="project-badge">Live</span>
       </div>
       <div class="project-body">
         <h3>Notion AI Operations Hub</h3>
-        <p>Built a full company operations system in Notion — task tracking with progress metrics, daily check-ins, EOD reporting, team credentials database, and automated status tracking. Everything the team needs in one place.</p>
+        <p>Built a full company operations system in Notion: task tracking with progress metrics, daily check-ins, EOD reporting, team credentials database, and automated status tracking. Everything the team needs in one place.</p>
         <div class="project-stack">
           <span class="stack-tag">Notion</span>
           <span class="stack-tag">Notion AI</span>
@@ -914,13 +931,12 @@
     </div>
 
     <div class="project-card">
-      <img class="project-thumb" src="discord-notifications.png" alt="Social Media Growth 7M Views" loading="lazy">
       <div class="project-header">
         <div class="project-icon icon-purple">📱</div>
         <span class="project-badge">Live</span>
       </div>
       <div class="project-body">
-        <h3>Social Media Growth — 7M Views</h3>
+        <h3>Social Media Growth: 7M Views</h3>
         <p>Grew social media presence across Instagram, TikTok, and YouTube to 7M total views and 1.3M+ reach. Used Hootsuite, Publer, and Metricool for scheduling optimization and performance tracking.</p>
         <div class="project-stack">
           <span class="stack-tag">Publer</span>
@@ -989,12 +1005,83 @@
       </div>
       <div class="project-body">
         <h3>Custom Internal Business Apps</h3>
-        <p>Designed and built internal web apps for the team: operations dashboards, an encrypted credentials vault, a task dispatcher that pings editors in Discord, and profit and margin trackers for channel budgeting.</p>
+        <p>Designed and built internal web apps for the team: a command center map with its own lock for each department, operations dashboards, an encrypted credentials vault, a task dispatcher that pings editors in Discord, and profit and margin trackers for channel budgeting.</p>
         <div class="project-stack">
           <span class="stack-tag">JavaScript</span>
           <span class="stack-tag">HTML</span>
           <span class="stack-tag">Vercel</span>
           <span class="stack-tag">Web Apps</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img class="project-thumb fit" src="daily-report.jpg" alt="Daily research report posted in Discord" loading="lazy">
+      <div class="project-header">
+        <div class="project-icon icon-amber">📰</div>
+        <span class="project-badge">Live</span>
+      </div>
+      <div class="project-body">
+        <h3>AI Daily Research Report</h3>
+        <p>Built a team of AI research agents that writes a daily and weekly report on trends and business ideas, split by topic with sources, and sends it to Discord and email. No more searching by hand every day.</p>
+        <div class="project-stack">
+          <span class="stack-tag">AI Agents</span>
+          <span class="stack-tag">Discord Webhooks</span>
+          <span class="stack-tag">Gmail</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img class="project-thumb" src="order-tracker.jpg" alt="Order tracker web app demo" loading="lazy">
+      <div class="project-header">
+        <div class="project-icon icon-green">📦</div>
+        <span class="project-badge">Demo</span>
+      </div>
+      <div class="project-body">
+        <h3>Order Tracker Web App</h3>
+        <p>A demo order tracker for a small bakery. Every order sits on a board by stage, late pickups turn red, unpaid totals show at the top, and the whole list downloads to a spreadsheet in one click.</p>
+        <div class="project-stack">
+          <span class="stack-tag">JavaScript</span>
+          <span class="stack-tag">HTML</span>
+          <span class="stack-tag">Dashboards</span>
+          <span class="stack-tag">CSV Export</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img class="project-thumb fit" src="sample-websites.jpg" alt="Two phone-first sample websites" loading="lazy">
+      <div class="project-header">
+        <div class="project-icon icon-cyan">📱</div>
+        <span class="project-badge">Demo</span>
+      </div>
+      <div class="project-body">
+        <h3>Phone-First Sites for Local Businesses</h3>
+        <p>Fast homepages built for phones, with a big call button, services, areas served, and a free quote form. Two sample sites show how a plumber and a lawn care company can win more calls.</p>
+        <div class="project-stack">
+          <span class="stack-tag">HTML</span>
+          <span class="stack-tag">CSS</span>
+          <span class="stack-tag">Mobile First</span>
+          <span class="stack-tag">Vercel</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img class="project-thumb" src="style-reel.jpg" alt="20 motion graphics styles reel" loading="lazy">
+      <div class="project-header">
+        <div class="project-icon icon-purple">🎬</div>
+        <span class="project-badge">New</span>
+      </div>
+      <div class="project-body">
+        <h3>Motion Graphics Style Reel</h3>
+        <p>A reel of 20 motion graphics styles, from comic book and neo-brutalism to paper cutout, built with code-driven animation. Used for logo intros, titles, and short videos for YouTube, Reels, and TikTok.</p>
+        <div class="project-stack">
+          <span class="stack-tag">HyperFrames</span>
+          <span class="stack-tag">GSAP</span>
+          <span class="stack-tag">HTML/CSS</span>
+          <span class="stack-tag">AI Tools</span>
         </div>
       </div>
     </div>
@@ -1052,13 +1139,13 @@
     <div class="exp-item">
       <div class="exp-date">Dec 2025 – Present</div>
       <div class="exp-role">Operations Manager<span class="exp-tag">Current Role</span></div>
-      <div class="exp-company">Lookup Media LLC · Sheridan, Wyoming, USA · Remote</div>
+      <div class="exp-company">US digital media company · Remote</div>
       <div class="exp-desc">The operations backbone of a US-based digital media company. I lead and train the team, manage projects end to end, build the automation and AI systems that run the operation, and bring ideas straight to the CEO on new channels and launches.</div>
       <ul class="exp-highlights">
         <li><strong>Team Leadership &amp; Project Management:</strong> Lead a remote team of scriptwriters, editors, and thumbnail designers. Delegate and track tasks, set deadlines, and coordinate daily workflow so every project is done properly and on schedule.</li>
         <li><strong>Training &amp; Development:</strong> Train and mentor new assistants, building their skills and preparing top performers for promotion.</li>
         <li><strong>Automation &amp; Engineering:</strong> Design Discord servers and build a Python recruitment bot, Make.com Trello-to-Discord and Excel-to-Notion automations, an n8n + ComfyUI + Docker + RunPod AI image pipeline, and a Vercel-deployed batch image generator.</li>
-        <li><strong>Channel Growth &amp; Content:</strong> Grow channels through content research, finding the topics and formats that lift views. Prompt engineering for Sora 2 and hyper-realistic images, plus content ideation for Dish, Food, and ASMR channels.</li>
+        <li><strong>Channel Growth &amp; Content:</strong> Grow channels through content research, finding the topics and formats that lift views. Prompt engineering for Sora 2 and hyper-realistic images, plus content ideation for new channels.</li>
         <li><strong>Ebooks &amp; Digital Products:</strong> Helped create the company's ebooks and built the websites that sell them, opening a new digital sales channel.</li>
         <li><strong>Operations, Recruitment &amp; Payroll:</strong> Built a Notion AI operations hub (task tracking, EOD reports, team database), authored SOPs, run full-cycle recruitment and onboarding, process payroll, and manage channel setup, monetization, and AdSense tracking.</li>
         <li><strong>Ideas &amp; Growth:</strong> Work directly with the CEO, bringing ideas for new channels and initiatives that shape company growth strategy.</li>
