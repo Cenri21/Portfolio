@@ -142,6 +142,22 @@
   .piece .go { display: inline-flex; margin-top: 20px; color: #fff; font-weight: 800; text-decoration: none; padding: 10px 16px; border-radius: 10px; background: var(--c); }
   .piece .go:hover { filter: brightness(1.1); }
   .p-discord { --c: var(--discord); } .p-bot { --c: var(--bot); } .p-auto { --c: #D97F0A; } .p-app { --c: var(--app); }
+  /* Standard project entry: hook, problem, what I built, results, tools */
+  @media (min-width: 1021px) { .piece { align-items: start; } .piece > :last-child { position: sticky; top: 96px; } }
+  .piece .hook { color: #C9D0E4; font-size: 1.1rem; margin: -8px 0 18px; }
+  .ba .a ul { margin: 4px 0 0; padding-left: 1.1em; color: #E3E7F2; display: grid; gap: 6px; }
+  .ba code, .chat code { background: rgba(255,255,255,.12); padding: 1px 6px; border-radius: 5px; font-size: .92em; }
+  .results { list-style: none; padding: 0; margin: 16px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; }
+  .results li { background: rgba(255,255,255,.06); border-radius: 14px; padding: 10px 14px; color: #AEB6CC; font-size: .88rem; box-shadow: inset 3px 0 0 var(--c); }
+  .results b { display: block; color: #fff; font-size: 1.3rem; font-weight: 900; line-height: 1.2; }
+  .tools-row { list-style: none; padding: 0; margin: 14px 0 0; display: flex; flex-wrap: wrap; gap: 6px; }
+  .tools-row li { font-size: .8rem; font-weight: 700; padding: 3px 10px; border-radius: 99px; box-shadow: inset 0 0 0 1.5px rgba(255,255,255,.25); color: #E3E7F2; }
+  .dc-pick, .dc-btns { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+  .dc-pick span { font-size: .8rem; font-weight: 700; padding: 5px 10px; border-radius: 4px; background: #2B2D31; color: var(--dc-dim); box-shadow: inset 0 0 0 1px #1F2023; }
+  .dc-pick span.on { background: rgba(88,101,242,.3); color: #fff; box-shadow: inset 0 0 0 1px #5865F2; }
+  .dc-pick span.on::before { content: "✓ "; }
+  .dc-btns span { font-size: .8rem; font-weight: 700; color: #fff; padding: 6px 14px; border-radius: 4px; }
+  .dc-btns .ok { background: #248046; } .dc-btns .no { background: #DA373C; } .dc-btns .gr { background: #4E5058; }
 
   .steps3 { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; counter-reset: k; }
   .steps3 li { counter-increment: k; display: grid; grid-template-columns: 36px 1fr; gap: 14px; align-items: start; background: #fff; color: var(--ink); border-radius: 14px; padding: 14px 16px; }
@@ -379,14 +395,74 @@
       </div>
     </div>
 
-    <article class="piece p-discord">
+    <!--
+      PROJECT ENTRY TEMPLATE. Copy one <article class="piece"> block and fill these in, in this order:
+      color (p-discord, p-bot, p-auto, p-app), tag, title, one-line hook, the problem,
+      what I built (3 to 5 bullets), results (2 to 4 numbers), tools, and a picture or mockup on the right.
+      Full guide: PROJECT-TEMPLATE.md (kept on Cenri's PC only).
+    -->
+
+    <article class="piece p-bot" id="work-hiring">
+      <div>
+        <span class="tag"><svg class="i"><use href="#i-bot"/></svg>Discord servers and bots</span>
+        <h3>Recruitment server and hiring bot</h3>
+        <p class="hook">Turned a cluttered hiring server into a clean recruitment community, run by a bot that opens a new job with one command.</p>
+        <div class="ba">
+          <div class="b"><strong>The problem</strong><p>The company's hiring server had grown to 178 channels. Applicants got lost, old instructions piled up, and every new job meant setting up channels and roles by hand.</p></div>
+          <div class="a"><strong>What I built</strong><ul>
+            <li>A clean layout: welcome, rules, an open positions board, community chat, support tickets and a staff area.</li>
+            <li>About 185 members moved onto three clear roles, with every change previewed first and old instructions archived, not deleted.</li>
+            <li>A Python hiring bot. <code>/build Actor</code> creates a whole hiring section for that job, then asks who monitors it, who else can see it and what the trial task is.</li>
+            <li>Applicants pick their jobs when they join, see only those jobs, fill a short form and get a private ticket with Accept, Reject and Close buttons.</li>
+            <li><code>/post</code> shares a job publicly with an "I'm interested" button, and <code>/close-job</code> removes a job's whole section.</li>
+          </ul></div>
+        </div>
+        <ul class="results">
+          <li><b>178</b>channels cleaned up</li>
+          <li><b>~185</b>members on clear roles</li>
+          <li><b>1</b>command to open a job</li>
+        </ul>
+        <ul class="tools-row"><li>Python</li><li>discord.py</li><li>Discord API</li><li>Bot design</li><li>Server architecture</li></ul>
+      </div>
+      <div>
+        <div class="chat">
+          <div class="dc-msg">
+            <div class="dc-av">HB</div>
+            <div><span class="dc-who">Hiring Bot</span><span class="dc-tag">APP</span>
+              <p>Which jobs are you here for? You'll only see the ones you pick.</p>
+              <div class="dc-pick"><span class="on">Actor</span><span class="on">Video Editor</span><span>Scriptwriter</span><span>Thumbnail Designer</span></div></div>
+          </div>
+          <div class="dc-msg">
+            <div class="dc-av">HB</div>
+            <div><span class="dc-who">Hiring Bot</span><span class="dc-tag">APP</span>
+              <p><strong style="color:#fff">New application: Video Editor</strong></p>
+              <p>Experience, portfolio link and hours are in the form above. <a>@Editing Lead</a> is watching this ticket.</p>
+              <div class="dc-btns"><span class="ok">Accept</span><span class="no">Reject</span><span class="gr">Close</span></div></div>
+          </div>
+        </div>
+        <p class="cap">The shape of the job picker and an application ticket. Names changed.</p>
+      </div>
+    </article>
+
+    <article class="piece p-discord" id="work-builder">
       <div>
         <span class="tag"><svg class="i"><use href="#i-discord"/></svg>Discord servers</span>
         <h3>Discord Server Builder</h3>
+        <p class="hook">One command builds a whole Discord server from a template, the same way every time.</p>
         <div class="ba">
-          <div class="b"><strong>Before</strong><p>Setting up a team server by hand took hours of clicking roles, channels and permissions, and every server came out a little different.</p></div>
-          <div class="a"><strong>After</strong><p>My own bot builds the whole server from a template: roles in the right order, private channels, threads, pinned rules and webhooks. It never deletes what is already there.</p></div>
+          <div class="b"><strong>The problem</strong><p>Setting up a team server by hand took hours of clicking roles, channels and permissions, and every server came out a little different.</p></div>
+          <div class="a"><strong>What I built</strong><ul>
+            <li>A bot that builds roles in the right order, private channels, threads, pinned rules and webhooks.</li>
+            <li>Four templates, from a small community to a full team workspace.</li>
+            <li>Preview first, and it never deletes what is already there.</li>
+          </ul></div>
         </div>
+        <ul class="results">
+          <li><b>11</b>roles</li>
+          <li><b>36</b>channels</li>
+          <li><b>15</b>threads, in minutes</li>
+        </ul>
+        <ul class="tools-row"><li>Python</li><li>discord.py</li><li>Discord API</li><li>Templates</li></ul>
       </div>
       <ol class="steps3">
         <li><span>Pick a template, from a small community to a full team workspace.</span></li>
@@ -395,35 +471,23 @@
       </ol>
     </article>
 
-    <article class="piece p-bot">
-      <div>
-        <span class="tag"><svg class="i"><use href="#i-bot"/></svg>Bots</span>
-        <h3>Recruitment bot</h3>
-        <div class="ba">
-          <div class="b"><strong>Before</strong><p>Every applicant needed someone to give them a role, explain the trial task and find the right team lead.</p></div>
-          <div class="a"><strong>After</strong><p>An applicant opens a ticket and the Python bot does the rest: assigns their role, posts the instructions and pings the team lead. Zero manual work.</p></div>
-        </div>
-      </div>
-      <div>
-        <div class="chat">
-          <div class="dc-msg">
-            <div class="dc-av">RB</div>
-            <div><span class="dc-who">Recruit Bot</span><span class="dc-tag">APP</span>
-              <p>Welcome! You're applying as <a>@Video Editor</a>. Your trial task is pinned above, due in 48 hours. <a>@Editing Lead</a> will review it.</p></div>
-          </div>
-        </div>
-        <p class="cap">The shape of a ticket reply. Hosted 24/7 on Discloud.</p>
-      </div>
-    </article>
-
-    <article class="piece p-auto">
+    <article class="piece p-auto" id="work-trello">
       <div>
         <span class="tag"><svg class="i"><use href="#i-auto"/></svg>Automations</span>
         <h3>Trello to Discord alerts</h3>
+        <p class="hook">Editors get pinged the moment their video is ready, approved or sent back.</p>
         <div class="ba">
-          <div class="b"><strong>Before</strong><p>Editors waited for someone to tell them a video was ready, approved or needed changes, across many channels' boards.</p></div>
-          <div class="a"><strong>After</strong><p>A Make.com scenario watches every board and pings the right editor in Discord the moment a card moves. No more follow-ups.</p></div>
+          <div class="b"><strong>The problem</strong><p>Editors waited for someone to tell them a video was ready, approved or needed changes, across many channels' boards.</p></div>
+          <div class="a"><strong>What I built</strong><ul>
+            <li>A Make.com scenario that watches every channel's Trello board.</li>
+            <li>It reads the card's stage and owner, then pings the right editor in the right Discord channel.</li>
+          </ul></div>
         </div>
+        <ul class="results">
+          <li><b>0</b>manual follow-ups</li>
+          <li><b>Seconds</b>from card move to ping</li>
+        </ul>
+        <ul class="tools-row"><li>Make</li><li>Trello</li><li>Discord</li><li>Webhooks</li></ul>
       </div>
       <ol class="chain">
         <li class="c-discord"><span class="ic"><svg class="i"><use href="#i-card"/></svg></span><div><b>A card moves in Trello</b><span>Ready to edit, approved, or needs changes</span></div></li>
@@ -432,14 +496,24 @@
       </ol>
     </article>
 
-    <article class="piece p-app">
+    <article class="piece p-app" id="work-orders">
       <div>
-        <span class="tag"><svg class="i"><use href="#i-app"/></svg>Dashboards and apps</span>
+        <span class="tag"><svg class="i"><use href="#i-app"/></svg>Dashboards and apps · Demo</span>
         <h3>Order tracker web app</h3>
+        <p class="hook">A small bakery's orders on one board instead of a notebook and a pile of DMs.</p>
         <div class="ba">
-          <div class="b"><strong>Before</strong><p>Orders live in a notebook and in DMs. Easy to miss a pickup or forget who already paid.</p></div>
-          <div class="a"><strong>After</strong><p>A board shows every order by stage. Late orders turn red, one tap moves an order along, and it all downloads to a spreadsheet.</p></div>
+          <div class="b"><strong>The problem</strong><p>Orders live in a notebook and in DMs. Easy to miss a pickup or forget who already paid.</p></div>
+          <div class="a"><strong>What I built</strong><ul>
+            <li>A board with every order by stage. Late orders turn red.</li>
+            <li>Unpaid totals and today's pickups at the top.</li>
+            <li>One tap moves an order along, and the whole list downloads to a spreadsheet.</li>
+          </ul></div>
         </div>
+        <ul class="results">
+          <li><b>1 tap</b>to move an order</li>
+          <li><b>1 click</b>to export</li>
+        </ul>
+        <ul class="tools-row"><li>JavaScript</li><li>HTML</li><li>CSS</li><li>CSV export</li></ul>
         <a class="go" href="https://cenri-builds.vercel.app/demos/order-tracker.html" target="_blank" rel="noopener">Try the demo</a>
       </div>
       <a class="shot" href="https://cenri-builds.vercel.app/demos/order-tracker.html" target="_blank" rel="noopener" aria-label="Open the order tracker demo">
