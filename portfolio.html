@@ -402,6 +402,34 @@
       Full guide: PROJECT-TEMPLATE.md (kept on Cenri's PC only).
     -->
 
+    <article class="piece p-bot" id="work-tgshop">
+      <div>
+        <span class="tag"><svg class="i"><use href="#i-bot"/></svg>Telegram bots</span>
+        <h3>Telegram shop bot</h3>
+        <p class="hook">A ready-made shop bot that takes small sellers from DM chaos to orders, payment checks, delivery and real vouches in one place.</p>
+        <div class="ba">
+          <div class="b"><strong>The problem</strong><p>Small Telegram sellers take orders in DMs, check payment screenshots one by one, and post "vouches" that anyone can fake.</p></div>
+          <div class="a"><strong>What I built</strong><ul>
+            <li>A product menu: the buyer picks an item, gets an order number and sends their payment proof.</li>
+            <li>The seller gets the proof with Approve and Reject buttons, then replies with the item and the bot delivers it.</li>
+            <li>Vouches only from buyers with a delivered order, one per order, and the seller checks each one before it reaches the vouch group.</li>
+            <li><code>/sales</code> totals for today, the week, the month and all time, plus a finder that flags public "looking for" posts so a person can follow up.</li>
+            <li>A setup guide and SOP so a non-technical seller can run their own copy.</li>
+          </ul></div>
+        </div>
+        <ul class="results">
+          <li><b>1 tap</b>to approve a payment</li>
+          <li><b>1</b>vouch per delivered order</li>
+          <li><b>0</b>card numbers or passwords stored</li>
+        </ul>
+        <ul class="tools-row"><li>Python</li><li>python-telegram-bot</li><li>SQLite</li><li>Telegram Bot API</li><li>Bot design</li></ul>
+        <a class="go" href="https://cenri-builds.vercel.app/demos/telegram-shop-bot.html" target="_blank" rel="noopener">Try the demo</a>
+      </div>
+      <a class="shot" href="https://cenri-builds.vercel.app/demos/telegram-shop-bot.html" target="_blank" rel="noopener" aria-label="Open the Telegram shop bot demo">
+        <img src="telegram-shop-bot.jpg" alt="Telegram shop bot demo: the seller's chat with a delivered order, a buyer's vouch waiting for approval, and the sales command" loading="lazy" width="1200" height="640">
+      </a>
+    </article>
+
     <article class="piece p-bot" id="work-hiring">
       <div>
         <span class="tag"><svg class="i"><use href="#i-bot"/></svg>Discord servers and bots</span>
